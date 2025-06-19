@@ -19,6 +19,64 @@ st.set_page_config(page_title="Prediksi Dropout Mahasiswa", layout="centered")
 st.title("🎓 Prediksi Dropout Mahasiswa – Jaya Jaya Institut")
 st.write("Isi data di bawah untuk memprediksi apakah mahasiswa akan dropout atau tidak. Semua nilai sudah berupa angka sesuai hasil preprocessing.")
 
+# Informasi Keterangan Nilai Kategorikal
+with st.sidebar.expander("ℹ️ Keterangan Nilai Kategorikal"):
+    st.markdown("""
+**Marital_status**
+1: Single
+2: Married
+3: Widower
+4: Divorced
+5: Facto Union
+6: Legally Separated
+
+**Application_mode** (Contoh)
+1: 1st phase - general
+15: International student
+42: Transfer
+(dll)
+
+**Daytime_evening_attendance**
+1: Daytime
+0: Evening
+
+**Previous_qualification**
+1: Secondary education
+2: Bachelor's degree
+4: Master's
+5: Doctorate
+19: Basic education
+(dll)
+
+**Displaced / Debtor / Scholarship_holder / International**
+1: Ya
+0: Tidak
+
+**Mothers_qualification / Fathers_qualification**
+1: Secondary Edu
+5: Doctorate
+34: Unknown
+(dll)
+
+**Mothers_occupation / Fathers_occupation**
+0: Student
+1: Eksekutif
+2: Profesi Ilmiah
+...
+194: Meal Preparation Assistants
+
+**Admission_grade & Previous_qualification_grade**
+Skala nilai: 0 – 200
+
+**Curricular Units**
+Mata kuliah semesteran:
+- `enrolled`: jumlah diambil
+- `evaluations`: jumlah dievaluasi
+- `approved`: jumlah lulus
+- `grade`: nilai rata-rata
+- `without_evaluations`: tidak ikut ujian
+    """)
+
 # Daftar fitur input
 feature_info = {
     "Marital_status": "Status pernikahan (1=single, 2=married, dst)",
